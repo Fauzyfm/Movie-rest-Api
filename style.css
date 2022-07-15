@@ -1,0 +1,45 @@
+
+.spinner {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+}
+
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    animation: spin 0.5s infinite linear;
+}
+
+.spinner:after {
+    width: 85%;
+    height: 85%;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.bg-body {
+    background-color: #1F1F1F;
+}
+.logo-color {
+    color: #00B2FF;
+}
+.hover-color {
+    color: #FFB800;
+}
